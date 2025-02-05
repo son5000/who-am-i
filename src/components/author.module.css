@@ -1,0 +1,9 @@
+.author {
+    grid-area: author;
+    background-color: red;
+    max-width: 485px;
+    height: 1050px;
+    padding: 50px;
+    position: sticky;
+    top: 15px;
+}

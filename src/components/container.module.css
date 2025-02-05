@@ -1,0 +1,21 @@
+.container {
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 15px;
+    position: relative;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 2fr 80px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "author header hamburger"
+    "author content sideMenu"
+    " . footer footer";
+}
+
+.container > * { border-radius: 10px;}
+
+
+
+
+

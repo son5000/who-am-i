@@ -1,0 +1,7 @@
+.sideMenu {
+    grid-area: sideMenu;
+    max-height: 500px;
+    background-color: blueviolet;
+    position: sticky;
+    top: 125px;
+}

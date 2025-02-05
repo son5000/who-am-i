@@ -1,0 +1,7 @@
+.hamburger {
+    grid-area: hamburger;
+    height: 85px;
+    background-color: brown;
+    position: sticky;
+    top: 15px;
+}
