@@ -1,9 +1,143 @@
 .author {
     grid-area: author;
-    background-color: red;
     max-width: 485px;
+    min-width: 330px;
     height: 1050px;
     padding: 50px;
     position: sticky;
     top: 15px;
 }
+
+:global(.dark) .author{
+    background-color: var(--theme-light-content);
+}
+
+.author > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.author > div > img {
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.author > div > h3 {
+    font-size: 38px;
+    margin-bottom: 16px;
+}
+
+:global(.dark) .author > div > h3 {
+    color: var(--white);
+}
+
+.author > div > span {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--light-gray);
+    margin-bottom: 40px;
+}
+
+:global(.dark) .author > div > span {
+    color: var(--dark-gray);
+}
+
+.author > div > div {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.author > div > div > a::before {
+    width: 50px;
+    height: 50px;
+    content: "";
+    background: url(/images/contact.png) no-repeat center / contain;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+}
+
+.author > div > div > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 21px;
+    width: 153px;
+    border-radius: 10px;
+    height: 70px;
+    background-color: #ace1af;
+}
+
+.author > div > div > a:hover{
+    background-color: #5ea152;
+}
+
+.author > div > p {
+    line-height: 20px;
+}
+
+.author > div > p:nth-of-type(1){
+     font-size: 16px;
+     font-weight: 600;
+     color: var(--light-gray);
+     margin-bottom: 20px;
+}
+
+:global(.dark) .author > div > p:nth-of-type(1){
+     color: var(--dark-gray);
+}
+
+.author > div > p:nth-of-type(2) {
+    font-weight: 600;
+    margin-bottom: 70px;
+}
+
+:global(.dark) .author > div > p:nth-of-type(2) {
+    color: var(--white);
+}
+
+.author > div > ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--theme-light);
+    height: 55px;
+    border-radius: 10px;
+}
+
+:global(.dark) .author > div > ul {
+    background-color: var(--theme-dark);
+}
+
+
+
+.author > div > ul > li > a {
+    width: 35px;
+    height: 35px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+}
+
+.author > div > ul > li:nth-of-type(1) > a{
+    background-image: url(/images/instagram.png);
+}
+
+.author > div > ul > li:nth-of-type(2) > a{
+    background-image: url(/images/github.png);
+}
+
+.author > div > ul > li:nth-of-type(3) > a{
+    background-image: url(/images/notion.png);
+}
+
+
+

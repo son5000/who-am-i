@@ -1,5 +1,19 @@
 .content { 
     grid-area: content;
     height: 1500px;
-    background-color: blue;
+    padding: 110px;
 }
+
+:global(.dark) .content{
+    background-color: var(--theme-light-content);
+}
+
+.content span {
+    color : #5ea152
+}
+
+:global(.dark) .content {
+    color: var(--white);
+}
+
+

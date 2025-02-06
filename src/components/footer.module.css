@@ -1,5 +1,8 @@
 .footer {
     grid-area: footer;
     height: 85px;
-    background-color: yellow;
+}
+
+:global(.dark) .footer{
+    background-color: var(--theme-light-content);
 }

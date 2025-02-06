@@ -1,30 +1,53 @@
 import styles from "@/components/header.module.css"
+import { useTheme } from "@/lib/ThemeContext";
+import { useState } from "react"
 
 export function Header () {
+
+    const { theme , setTheme } = useTheme();
+
+    function changeTheme () {
+        return active ? setTheme('light') : setTheme('dark');
+    }
+
+    const [ active, setActive ] = useState(false);
+
+    function handleClick  () {
+        setActive(!active);
+        changeTheme();
+    }
+
+    console.log(active,theme);
 
     return (
         <header className={styles.header}>
             <span>이미지</span>
             <nav>
-                <ul className={styles.ul}>
+                <ul>
                     <li>
-                        <a href="/">홈</a>
+                        <a href="/">About Me</a>
                     </li>
                     <li>
-                        <a href="/">자기소개</a>
+                        <a href="/">Education</a>
                     </li>
                     <li>
-                        <a href="/">프로젝트</a>
+                        <a href="/">Project</a>
                     </li>
                     <li>
-                        <a href="/">컨택트</a>
+                        <a href="/">Contact</a>
                     </li>
                     <li>
-                        <a href="/">방명록</a>
+                        <a href="/">Guestbook</a>
                     </li>
                 </ul>
             </nav>
-            <button>테마전환버튼</button>
+            <div>
+                <button
+                    className={active ? styles.active : ""}  
+                    onClick={() => handleClick()}>
+                    Thema
+                </button>
+            </div>
         </header>
     )
 }

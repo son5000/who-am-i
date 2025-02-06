@@ -2,7 +2,6 @@
     grid-area: header;
     height: 85px;
     padding-inline: 30px;
-    background-color: green;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +9,64 @@
     top: 15px;
 }
 
-.ul{
+:global(.dark) .header{
+    background-color: var(--theme-light-content);
+}
+
+.header > nav > ul{
     display: flex;
-    gap: 10px;
+    gap: 20px;
+
+}
+
+.header > nav > ul > li > a {
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+:global(.dark) .header > nav > ul > li > a {
+    color: var(--dark-gray);
+}
+
+.header > nav > ul > li > a:hover{
+    color: black;
+}
+
+.header > div {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header > div > button {
+    cursor: pointer;
+    width: 35px;
+    text-indent: -9999px;
+    background: url(/images/lightmode.png) no-repeat center / cover;
+}
+
+.header > div > button::before{
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background: url(/images/sun.png) no-repeat center / cover;
+    top: 4px;
+    left: 0;
+}
+
+.header > div > button::after{
+    content: "";
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background: url(/images/moon.png) no-repeat center / cover;
+    top: 4px;
+    right: 0;
+}
+
+.header > div > button.active {
+    background-image : url(/images/darkmode.png);
 }

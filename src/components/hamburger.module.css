@@ -1,7 +1,10 @@
 .hamburger {
     grid-area: hamburger;
     height: 85px;
-    background-color: brown;
     position: sticky;
     top: 15px;
+}
+
+:global(.dark) .hamburger{
+    background-color: var(--theme-light-content);
 }
